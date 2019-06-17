@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kr.hubeen.sharetaxi.main"
+    android:background="#ffffff">
+
+    <EditText
+        android:id="@+id/loginID"
+        android:layout_width="207dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:text="아이디"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNotics"
+        android:layout_width="344dp"
+        android:layout_height="210dp"
+        android:layout_marginBottom="280dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@android:color/transparent"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="안녕하세요.\n개발자입니다.\n이 서비스는 혼자 택시를 타고\n학교를 가는 것에 비해\n최대 70% 택시요금을 절약할 수 있으며,\n버스를 타는 것 보다 저렴합니다! \n(하루에 2번 시내버스를 20일 이용하였을 때 절약할 수 있는 금액: 18000원)"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNoticTitle" />
+
+    <TextView
+        android:id="@+id/txtNoticTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="이용 안내"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginID"
+
+        />
+
+    <Spinner
+        android:id="@+id/sprList"
+        android:layout_width="288dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNotics"
+        android:entries="@array/place"/>
+
+    <Button
+        android:id="@+id/btnMyRoom"
+        android:layout_width="130dp"
+        android:layout_height="105dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClick"
+        android:text="내 방 보기"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sprList"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnRoomMake"
+        android:layout_width="130dp"
+        android:layout_height="105dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClick"
+        android:text="방 만들기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sprList"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnRoomView"
+        android:layout_width="130dp"
+        android:layout_height="105dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:text="방 보기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnMyRoom"
+        app:layout_constraintTop_toBottomOf="@+id/sprList"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="place">
+        <item>자취촌</item>
+        <item>두정역</item>
+        <item>직산역</item>
+        <item>천안역</item>
+        <item>터미널</item>
+    </string-array>
+</resources>
